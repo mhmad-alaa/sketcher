@@ -4,13 +4,23 @@
   --secondary-dark: #393e46;
   --secondary-dark-hover: #4a4f57;
   --secondary-dark-active: #5b5f68;
-  --draw: #111720;
+  --draw: #68778d;
 }
 
 body {
   background-color: var(--primary-dark);
   color: var(--primary-light);
 }
+
+.row {
+  display: flex;
+  flex: 1;
+}
+
+.cell {
+  flex: 1;
+}
+
 
 .controls {
   display: flex;
@@ -41,13 +51,11 @@ body {
   height: 600px;
   border-radius: .5%;
   border: 2px solid black;
+  background-color: var(--primary-light);
 
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   margin-top: 40px;
-
-  background-color: var(--primary-light);
 }
 
 .clear {
@@ -92,11 +100,3 @@ button:active {
   background-color: var(--secondary-dark-active);
 }
 
-.row {
-  display: flex;
-  flex: 1;
-}
-
-.cell {
-  flex: 1;
-}

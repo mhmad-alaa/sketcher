@@ -3,6 +3,15 @@ let slider = document.querySelector('.slider');
 let sliderValue = document.querySelector('.slider-value');
 let clearBtn = document.querySelector('.clear'); 
 
+document.body.onmousedown = () => mouseClickedStatus = 1;
+document.body.onmouseup = () => mouseClickedStatus = 0;
+
+function mouseoverHandler(e) {
+  if (mouseClickedStatus)  
+    // e.target.style.backgroundColor = '#393e46';
+    // e.target.style.backgroundColor = '#8b9fbd';
+    e.target.style.backgroundColor = '#68778d';
+}
 
 slider.addEventListener('input', () => {
     sliderValue.innerText = `${slider.value} x ${slider.value}`;
@@ -25,14 +34,11 @@ function drawGrid(density) {
     }
 }
 
+clearBtn.addEventListener('click', () => {
+    let cells = document.querySelectorAll('.cell'); 
+    cells.forEach(cell => cell.style.backgroundColor = '#ddd');
+});
 
-document.body.onmousedown = () => mouseClickedStatus = 1;
-document.body.onmouseup = () => mouseClickedStatus = 0;
-
-function mouseoverHandler(e) {
-  if (mouseClickedStatus)
-    e.target.style.backgroundColor = '#111720';
-}
 
 function init() {
     sliderValue.innerText = `${slider.value} x ${slider.value}`;
