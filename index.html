@@ -2,11 +2,11 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>sketch</title>
+        <title>sketcher</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <script type="text/javascript" src="script.js"> </script>
+        <link rel="stylesheet" href="./style.css">
+        <script type="text/javascript" src="./script.js" defer> </script>
     </head>
     <body>
         <header class="header">
@@ -15,8 +15,10 @@
         <main class="main">
             <div class="controls">
                 <button class="clear">clear</button>
-                <input class="balette-range" type="range" min="1" max="128" value="64">
-                <span class="balette-txt">16 * 16</span>
+                <div class="slider-controls">
+                <input class="slider" type="range" min="1" max="128" value="64">
+                <span class="slider-value"></span>
+            </div>
             </div>
             <div class="main-frame"></div>
         </main>
